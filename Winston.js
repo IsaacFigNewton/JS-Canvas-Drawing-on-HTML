@@ -8,15 +8,17 @@ function circle(x, y, r) {
 };
 
 function Winston(x, y, r) {
+	var er = 4*r/30;
+	var mr = 128*r/300;
 	// face
 	circle(x, y, r);
 
 	// eyes
-	circle(x-43-(.25*r), y-59-(.25*r), 4*r/30);
-	circle(x+104+(.25*r), y-68-(.25*r), 4*r/30);
+	circle(x-(43*r)/150, y-(59*r)/150, er);
+	circle(x+(104*r)/150, y-(68*r)/150, er);
 
 	// mouth
-	circle(x+57+(.125*r), y+30+(.125*r), 128*r/300);
+	circle(x+(57*r)/150, y+(30*r)/150, mr);
 };
 
-Winston(400, 400, 300);
+Winston(400, 400, 400);
